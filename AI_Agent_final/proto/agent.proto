@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package agent;
+
+service AgentService {
+  rpc ShareData (DataRequest) returns (DataResponse);
+}
+
+message DataRequest {
+  string agent_name = 1;
+  string data = 2;
+}
+
+message DataResponse {
+  string message = 1;
+}
+
