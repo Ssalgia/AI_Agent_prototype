@@ -1,11 +1,7 @@
-import grpc
+import grpc 
 from concurrent import futures
-import agent_pb2
-import agent_pb2_grpc
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+import agent_pb2 as agent_pb2
+import agent_pb2_grpc as agent_pb2_grpc
 
 class DataAnalysisAgent(agent_pb2_grpc.AgentServiceServicer):
     def ShareData(self, request, context):
